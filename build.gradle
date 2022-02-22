@@ -5,7 +5,7 @@ plugins {
     id "com.github.johnrengelman.shadow" version "7.1.0"
 }
 
-group "org.example"
+group "space.essem"
 version "0.1.0"
 mainClassName = "org.springframework.boot.loader.JarLauncher"
 sourceCompatibility = 11
@@ -14,6 +14,7 @@ compileJava.options.encoding = "UTF-8"
 repositories {
     mavenCentral()
     maven { url "https://jitpack.io" }
+    maven { url 'https://dankmemeitthefrog.github.io/maven-repo' }
 
     // Transitive dependencies
     maven { url "https://m2.dv8tion.net/releases" }
@@ -23,6 +24,7 @@ repositories {
 dependencies {
     compileOnly "dev.arbjerg.lavalink:plugin-api:0.7.0"
     runtimeOnly "com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins"
+    implementation "com.sedmelluq:lavaplayer-ext-format-xm:0.1.2"
 }
 
 shadowJar {
