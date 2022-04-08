@@ -19,11 +19,12 @@ repositories {
     // Transitive dependencies
     maven { url "https://m2.dv8tion.net/releases" }
     jcenter()
+    mavenLocal()
 }
 
 dependencies {
-    compileOnly "dev.arbjerg.lavalink:plugin-api:0.7.0"
-    runtimeOnly "com.github.freyacodes.lavalink:Lavalink-Server:feature~plugins"
+    compileOnly 'dev.arbjerg.lavalink:plugin-api:0.9.0'
+    runtimeOnly "com.github.TheEssem.lavalink:Lavalink-Server:dev-SNAPSHOT"
     implementation "com.sedmelluq:lavaplayer-ext-format-xm:0.1.2"
 }
 
