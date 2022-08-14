@@ -24,8 +24,8 @@ repositories {
 
 dependencies {
     compileOnly 'dev.arbjerg.lavalink:plugin-api:0.9.0'
-    runtimeOnly "com.github.TheEssem.lavalink:Lavalink-Server:dev-SNAPSHOT"
-    implementation "com.sedmelluq:lavaplayer-ext-format-xm:0.1.2"
+    runtimeOnly "com.github.TheEssem.Lavalink:Lavalink-Server:dev-SNAPSHOT"
+    implementation "org.helllabs:libxmp-java:1.0.0"
 }
 
 shadowJar {
