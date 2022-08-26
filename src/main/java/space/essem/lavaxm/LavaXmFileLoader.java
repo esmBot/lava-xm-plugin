@@ -15,6 +15,7 @@ public class LavaXmFileLoader {
 
     public LavaXmTrackProvider loadTrack(AudioProcessingContext context) throws IOException {
         Player player = new Player(context.outputFormat.sampleRate);
+        player.setDefaultPanning(50);
         player.loadModuleFromMemory(this.inputStream);
 
         return new LavaXmTrackProvider(context, player);

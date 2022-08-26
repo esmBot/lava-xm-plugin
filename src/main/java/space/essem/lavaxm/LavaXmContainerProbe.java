@@ -14,6 +14,7 @@ import org.helllabs.libxmp.Module;
 
 import java.io.IOException;
 
+import org.helllabs.libxmp.Xmp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -40,6 +41,7 @@ public class LavaXmContainerProbe implements MediaContainerProbe {
   public MediaContainerDetectionResult probe(AudioReference reference, SeekableInputStream inputStream)
       throws IOException {
     Player player = new Player();
+    player.setSampleControlFlags(Xmp.SMPCTL_SKIP);
     try {
       player.loadModuleFromMemory(inputStream);
     } catch (IOException e) {
