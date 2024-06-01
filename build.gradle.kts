@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "space.essem"
-version = "0.2.2"
+version = "0.2.3"
 
 lavalinkPlugin {
     name = "lava-xm-plugin"
