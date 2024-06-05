@@ -4,7 +4,7 @@ plugins {
     alias(libs.plugins.lavalink)
 }
 
-group = "space.essem"
+group = "net.esmbot"
 version = "0.2.3"
 
 lavalinkPlugin {

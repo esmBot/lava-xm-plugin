@@ -1,4 +1,4 @@
-package space.essem.lavaxm;
+package net.esmbot.lavaxm;
 
 import com.sedmelluq.discord.lavaplayer.container.MediaContainerDetectionResult;
 import com.sedmelluq.discord.lavaplayer.container.MediaContainerHints;
