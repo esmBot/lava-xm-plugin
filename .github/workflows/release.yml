@@ -18,7 +18,10 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       - name: Execute Gradle build
-        run: ./gradlew build
+        run: ./gradlew build publish
+        env:
+          MAVEN_NAME: ${{ secrets.MAVEN_NAME }}
+          MAVEN_SECRET: ${{ secrets.MAVEN_SECRET }}
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
