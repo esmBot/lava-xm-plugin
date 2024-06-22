@@ -8,8 +8,8 @@ You have two options: either download the latest JAR file and put it in your `pl
 ```yaml
 lavalink:
   plugins:
-    - dependency: "com.github.esmBot:lava-xm-plugin:vx.x.x" # replace vx.x.x with the latest release tag
-      repository: "https://jitpack.io"
+    - dependency: "net.esmbot:lava-xm-plugin:vx.x.x" # replace vx.x.x with the latest release tag
+      repository: "https://repo.projectlounge.pw/maven/releases"
 ```
 
 ## Build

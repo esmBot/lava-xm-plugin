@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "net.esmbot"
-version = "0.2.3"
+version = "0.2.4"
 
 lavalinkPlugin {
     name = "lava-xm-plugin"
@@ -14,7 +14,7 @@ lavalinkPlugin {
 }
 
 repositories {
-    maven(url = "https://dankmemeitthefrog.github.io/maven-repo")
+    maven(url = "https://repo.projectlounge.pw/maven/releases")
 }
 
 java {
@@ -31,6 +31,17 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             from(components["java"])
+        }
+    }
+
+    repositories {
+        maven {
+            name = "projectlounge"
+            url = uri("https://repo.projectlounge.pw/maven/releases")
+            credentials {
+                username = System.getenv("MAVEN_NAME")
+                password = System.getenv("MAVEN_SECRET")
+            }
         }
     }
 }

@@ -6,4 +6,4 @@ lavalink-server = "4.0.0"
 lavalink = { id = "dev.arbjerg.lavalink.gradle-plugin", version = "1.0.10" }
 
 [libraries]
-libxmp = { module = "org.helllabs:libxmp-java", version = "1.0.3" }
+libxmp = { module = "org.helllabs:libxmp-java", version = "1.0.4" }
