@@ -23,8 +23,24 @@ import org.springframework.stereotype.Service;
 public class LavaXmContainerProbe implements MediaContainerProbe {
   private static final Logger log = LoggerFactory.getLogger(LavaXmContainerProbe.class);
 
-  public LavaXmContainerProbe() {
+  private final LavaXmConfig config;
+
+  public LavaXmContainerProbe(LavaXmConfig config) {
 		log.info("Loading MOD/XM playback plugin...");
+
+    this.config = config;
+
+    int ampFactor = config.getAmpFactor();
+    if (ampFactor > 3 || ampFactor < 0) {
+      log.error("The ampFactor config value is invalid, must be between 0 and 3");
+      return;
+    }
+
+    int interpolation = config.getInterpolation();
+    if (interpolation > 2 || interpolation < 0) {
+      log.error("The interpolation config value is invalid, must be 0 (nearest), 1 (linear), or 2 (cubic spline)");
+      return;
+    }
 	}
 
   @Override
@@ -60,6 +76,6 @@ public class LavaXmContainerProbe implements MediaContainerProbe {
 
   @Override
   public AudioTrack createTrack(String parameters, AudioTrackInfo trackInfo, SeekableInputStream inputStream) {
-    return new LavaXmAudioTrack(trackInfo, inputStream);
+    return new LavaXmAudioTrack(trackInfo, inputStream, config);
   }
 }
