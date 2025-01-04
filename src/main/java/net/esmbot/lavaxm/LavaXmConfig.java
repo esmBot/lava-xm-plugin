@@ -13,6 +13,7 @@ public class LavaXmConfig {
   private boolean fx9Bug = false;
   private boolean fixSampleLoop = false;
   private boolean amigaMixer = false;
+  private int defaultPan = 50;
 
   public int getAmpFactor() {
     return this.ampFactor;
@@ -38,6 +39,10 @@ public class LavaXmConfig {
     return this.amigaMixer;
   }
 
+  public int getDefaultPan() {
+    return this.defaultPan;
+  }
+
   public void setAmpFactor(int ampFactor) {
     this.ampFactor = ampFactor;
   }
@@ -60,5 +65,9 @@ public class LavaXmConfig {
 
   public void setAmigaMixer(boolean amigaMixer) {
     this.amigaMixer = amigaMixer;
+  }
+
+  public void setDefaultPan(int defaultPan) {
+    this.defaultPan = defaultPan;
   }
 }

@@ -41,6 +41,12 @@ public class LavaXmContainerProbe implements MediaContainerProbe {
       log.error("The interpolation config value is invalid, must be 0 (nearest), 1 (linear), or 2 (cubic spline)");
       return;
     }
+
+    int defaultPan = config.getDefaultPan();
+    if (defaultPan > 100 || defaultPan < 0) {
+      log.error("The default panning config value is invalid, must be between 0 and 100");
+      return;
+    }
 	}
 
   @Override

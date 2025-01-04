@@ -22,6 +22,7 @@ plugins:
     fx9Bug: false        # Emulates the FX9 effect bug from Protracker 2.x
     fixSampleLoop: false # Divides sample loop start values in half
     amigaMixer: false    # Emulates the Paula mixer in Amiga modules
+    defaultPan: 50       # Default stereo panning, can be between 0 and 100
 ```
 
 ## Build

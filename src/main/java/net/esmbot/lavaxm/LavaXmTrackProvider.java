@@ -18,7 +18,7 @@ public class LavaXmTrackProvider {
     public LavaXmTrackProvider(AudioProcessingContext context, Player player, LavaXmConfig config) {
         this.player = player;
         this.config = config;
-        this.downstream = AudioPipelineFactory.create(context, new PcmFormat(1, player.getSamplingRate()));
+        this.downstream = AudioPipelineFactory.create(context, new PcmFormat(2, player.getSamplingRate()));
     }
 
     public void provideFrames() {
